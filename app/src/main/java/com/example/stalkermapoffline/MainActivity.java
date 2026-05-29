@@ -1,18 +1,16 @@
 package com.example.stalkermapoffline;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.graphics.Color;
+import android.graphics.Matrix;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.graphics.Matrix;
-import android.graphics.RectF;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private Matrix savedMatrix = new Matrix();
     private float currentScale = 1.0f;
     private final float MIN_SCALE = 0.5f;
-    private final float MAX_SCALE = 3.0f;
+    private final float MAX_SCALE = 4.0f;
     private Button zoomOutButton;
     private Button resetButton;
     private Button zoomInButton;
@@ -47,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         imageView.setImageResource(R.drawable.shoc_global_map);
         imageView.setScaleType(ImageView.ScaleType.MATRIX);
         imageView.setImageMatrix(matrix);
-
 
         // Обработка скролла
         imageView.setOnTouchListener(new View.OnTouchListener() {
